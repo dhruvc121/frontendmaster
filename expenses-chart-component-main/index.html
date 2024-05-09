@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+
+  <title>Frontend Mentor | Expenses chart component</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <div class="header-contanier">
+      <div class="text">
+        <span class="my-balance-text">My balance</span> <br/>
+        <span class="balance-container"><h1 class="balance-amount">$921.48</h1></span>
+      </div>
+      <div class="logo-container">
+        <span><img src="./images/logo.svg" alt="logo"></span>
+      </div>
+    </div>
+    <div class="body-container">
+      <div class="body-container-title">
+        <p class="title">Spending - Last 7 days</p>
+      </div>
+      <div class="chart">
+        <div class="bar-container">
+          <div class="bar-value"></div>
+          <div class="bar"></div>
+          <div class="bar-title">mon</div>
+        </div>
+        <div class="bar-container">
+          <div class="bar-value"></div>
+          <div class="bar"></div>
+          <div class="bar-title">tue</div>
+        </div>
+        <div class="bar-container">
+          <div class="bar-value"></div>
+          <div class="bar"></div>
+          <div class="bar-title">wed</div>
+        </div>
+        <div class="bar-container">
+          <div class="bar-value"></div>
+          <div class="bar"></div>
+          <div class="bar-title">thu</div>
+        </div>
+        <div class="bar-container">
+          <div class="bar-value"></div>
+          <div class="bar"></div>
+          <div class="bar-title">fri</div>
+        </div>
+        <div class="bar-container">
+          <div class="bar-value"></div>
+          <div class="bar"></div>
+          <div class="bar-title">sat</div>
+        </div>
+        <div class="bar-container">
+          <div class="bar-value"></div>
+          <div class="bar"></div>
+          <div class="bar-title">sun</div>
+        </div>
+      </div>
+      <hr class="divider"/>
+      <div class="body-container-footer">
+        <div class="body-container-footer-left">
+          Total this month <br/>
+          <span class="left-footer-amount">$478.33</span>
+        </div>
+        <div class="body-container-footer-right">
+          <span class="right-footer-percentage">
+            +2.4%
+          </span><br/>
+          from last month
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <script>
+    const barArr = document.querySelectorAll(".bar")
+    const valArr = document.querySelectorAll(".bar-value")
+    console.log(barArr,valArr)
+    barArr.forEach((element,index) => {
+      let height=(Math.random()*100).toFixed(2)
+      element.style.height=height+"px"
+      valArr[index].innerHTML="$"+height
+      element.addEventListener('click',(event)=>{
+        myFoo(event)
+      })
+     /*  element.addEventListener('mouseover',(event)=>{
+        myFoo(event)
+      })
+      element.addEventListener('mouseout',(event)=>{
+        myFoo(event)
+      }) */
+    });
+    /* const myFoo=(element)=>{
+
+    } */
+    const myFoo=(e)=>{
+      //window.alert("heres")
+      e.target.style.backgroundColor=e.target.style.backgroundColor=="var(--Cyan)"?"":"var(--Cyan)";
+      e.target.previousElementSibling.style.display=e.target.previousElementSibling.style.display=="flex"?"none":"flex";
+    }
+  </script>
+</body>
+
+</html>

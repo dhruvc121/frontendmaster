@@ -1,0 +1,135 @@
+:root{
+    --Red: hsl(0, 100%, 74%) ;
+--Green: hsl(154, 59%, 51%);
+--Blue: hsl(248, 32%, 49%);
+--Dark-Blue: hsl(249, 10%, 26%) ;
+--Grayish-Blue: hsl(246, 25%, 77%);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    padding: 0 10rem;
+    background-image: url(./images/bg-intro-desktop.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: var(--Red);
+}
+section{
+    height: 100%;
+    width: 100%;
+}
+h1{
+    font-size: 36px;
+}
+.left,.right{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.title{
+    color: #fff;
+    padding-right: 5rem;
+}
+.subtitle{
+    color: #fff;
+    padding-right: 7rem;
+    margin-top: 1rem;
+}
+.snackbar{
+    margin: 1rem 0;
+    background-color: var(--Blue);
+    padding: 0.5rem auto;
+    text-align: center;
+    padding: 1rem 0;
+    border-radius: 10px;
+    color: #fff;
+    box-shadow: 0px 2px 5px 0px var(--Dark-Blue);
+}
+.snackbar-span{
+    font-weight: 700;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    padding: 2.5rem;
+    border-radius: 1rem;
+}
+.input-container{
+    width: 100%;
+    position: relative;
+}
+.input{
+    width: 100%;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    margin: 1rem 0;
+    font-weight: 600;
+    /* color: var(--Red); */
+    border: 1px solid var(--Blue);
+}
+.error-icon{
+    position: absolute;
+    top: 1.7rem;
+    right: 1rem;
+}
+.error-message{
+    position: absolute;
+    width: fit-content;
+    /* left: 0; */
+    /* bottom: 1rem; */
+    /* FONT-WEIGHT: 100; */
+    bottom: -10px;
+    right: 0px;
+    color: var(--Red);
+}
+.btn{
+    padding: 1rem;
+    margin: 1rem 0;
+    background: var(--Green);
+    border: none;
+    text-transform: uppercase;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: 700;
+    letter-spacing: 1px;
+    cursor: pointer;
+    box-shadow: 0px 2px 6px -2px var(--Dark-Blue);
+}
+.tnc{
+    text-align: center;
+    font-size: 10px;
+    color: var(--Grayish-Blue);
+}
+.tnc-span{
+    color: var(--Red);
+    font-weight: 700;
+}
+.hide{
+    display: none;
+}
+
+@media screen and (max-width:425px) {
+    body{
+        flex-direction: column;
+        min-height: 100vh;
+        padding: 5rem 1rem;
+    }
+    .left p,.left h1{
+        padding-right: 0;
+        text-align: center;
+    }
+    .snackbar{
+        letter-spacing: 1px;
+        padding: 1rem 2rem;
+    }
+}

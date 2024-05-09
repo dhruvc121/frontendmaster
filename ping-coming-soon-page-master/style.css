@@ -1,0 +1,127 @@
+:root{
+    --Pale-Blue: hsl(223, 100%, 88%);
+    --Light-Red: hsl(354, 100%, 66%);
+    --Gray: hsl(0, 0%, 59%);
+    --Very-Dark-Blue: hsl(209, 33%, 12%);
+    }
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    body{
+        height: 100vh;
+        width: 100%;
+        font-size: 20px;
+        font-family: 'Libre Franklin', sans-serif;
+        font-weight: 300;
+        display: flex;
+        justify-content: center;
+    }
+    .container{
+        height: 100%;
+        width: 50%;
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .logo{
+        margin: 3rem 0;
+    }
+    .title{
+        font-weight: 300;
+        color: var(--Gray);
+        letter-spacing: 1px;;
+    }
+    .bold{
+        font-weight: 700;
+        color: var(--Very-Dark-Blue);
+    }
+    .title,.subtitle{
+        margin: 1rem 0;
+    }
+    form{
+        width:100%;
+        margin: 1rem 0;
+        display: flex;
+        align-items: center;
+        position: relative;
+    }
+    .input{
+        width: 60%;
+        padding: 1rem 2rem;
+        border-radius: 2rem;
+        border: 1px solid var(--Pale-Blue);
+    }
+    .error-msg{
+        position: absolute;
+        color: var(--Light-Red);
+        font-size: 15px;
+    padding: 0 2rem;
+    top: 55px;
+    display: none;
+    }
+    .notify-btn{
+        padding: 1rem 2rem;
+        width: 40%;
+        border-radius: 2rem;
+        border: 1px solid var(--Pale-Blue);
+        background-color: var(--Pale-Blue);
+        color: #FFF;
+        font-size: 14px;
+        font-weight: 600;
+        cursor: pointer;
+    }
+    .illustration{
+        width: 100%;
+        margin: 1rem;
+    }
+    .footer-btns-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .footer-btn{
+        background: transparent;
+        padding: 0.5rem;
+        border-radius: 50%;
+        display: flex;
+        border: 1px solid var(--Pale-Blue);
+        justify-content: center;
+        align-items: center;
+        margin: 0 0.5rem;
+        cursor: pointer;
+    }
+    ion-icon {
+        --ionicon-stroke-width: 16px;
+      }
+    .icon{
+        fill:var(--Pale-Blue)
+    }
+    .footer-btn:hover,.icon:hover{
+        background-color: var(--Pale-Blue);
+        fill: #fff;
+    }
+    .footer-text{
+        font-size: 12px;
+        margin: 1rem 0;
+        color: var(--Gray);
+    }
+
+
+    @media screen and (max-width:425px) {
+        .container{
+            margin: 1rem;
+            width:100%;
+            text-align: center;
+        }
+        form{
+            flex-direction: column;
+        }
+        .input,.notify-btn{
+            width: 100%;
+            margin: 0.5rem 0;
+
+        }
+    }

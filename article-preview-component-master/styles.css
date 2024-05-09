@@ -1,0 +1,188 @@
+:root{
+--v-d-g-blue: hsl(217, 19%, 35%);
+--d-d-blue: hsl(214, 17%, 51%);
+--g-blue: hsl(212, 23%, 69%);
+--l-g-blue: hsl(210, 46%, 95%);
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    min-height: 100vh;
+    width:100%;
+    background-color: var(--l-g-blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'League Spartan', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+}
+.card{
+    height: 280px;
+    width: 730px;
+    background-color: white;
+    display: flex;
+    border-radius: 0.5rem;
+}
+.img-div{
+    flex:40%
+}
+.info-div{
+    flex:60%;
+    height: 100%;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start
+}
+.img-div>img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.card-title{
+    color: var(--v-d-g-blue);
+    font-size: 16px;
+    font-weight: 700;
+}
+.card-body{
+    color: var(--d-d-blue);
+}
+.card-footer{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+.user-info{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.avatar-container{
+    height: 45px;
+    width:45px;
+    
+}
+.avatar-container>span>img{
+    width:100%;
+    height: 100%;
+    border-radius: 50%;
+}
+.user-info-container{
+    display: flex;
+    flex-direction: column;
+    margin: 0 1rem;
+}
+.username{
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+    color: var(--v-d-g-blue);
+    letter-spacing: 1px;
+}
+.date{
+    color: var(--g-blue);
+    letter-spacing: 1px;
+}
+button{
+    border-radius: 50%;
+    background-color: var(--l-g-blue);
+    padding: 0.5rem;
+    border: none;
+    cursor: pointer;
+}
+.tooltip {
+    position: relative;
+    display: inline-block;
+  }
+  .desktop-view-icons{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 200px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: .5rem;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: -80%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  
+  .tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+  }
+  
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+  }
+  .mobile-view-icon{
+    display: none;
+  }
+@media screen and (max-width:425px){
+    .card{
+        flex-direction: column;
+    margin: 1rem;
+    height: 70vh;
+    width: 100%;
+    }
+    .img-div{
+        max-height: 40%;
+    }
+    .card-title{
+        line-height: 19px;
+        letter-spacing: 0px;
+        font-size: 22px;
+    }
+    .card-body{
+        letter-spacing: 1px;
+        line-height: 17px;
+    }
+    .tooltiptext::after{
+        display: none;
+    }
+    .tooltip .tooltiptext{
+       /*  top:0px; */
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+       height: 5rem;
+       width: 390px;
+       left: -268px;
+       top: -11px;
+    }
+    .desktop-view-icons{
+        flex: 60%;
+
+    }
+    .mobile-view-icon{
+        display: flex;
+        flex: 40%;
+        justify-content: right;
+        margin-right: 2rem;
+    }
+    .share-icon{
+        fill: var(--l-g-blue);
+    }
+}

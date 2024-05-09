@@ -1,0 +1,112 @@
+:root{
+    --Red: hsl(1, 90%, 64%);
+--Blue: hsl(219, 85%, 26%);
+--White: hsl(0, 0%, 100%);
+--Very-light-grayish-blue: hsl(210, 60%, 98%);
+--Light-grayish-blue-1: hsl(211, 68%, 94%);
+--Light-grayish-blue-2: hsl(205, 33%, 90%);
+--Grayish-blue: hsl(219, 14%, 63%);
+--Dark-grayish-blue: hsl(219, 12%, 42%);
+--Very-dark-blue: hsl(224, 21%, 14%);
+}
+
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    width: 100%;
+    background-color: var(--Very-light-grayish-blue);
+}
+.container{
+    width: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    padding: 0.5rem;
+    transform: translate(-50%, -50%);
+    background-color: var(--White);
+    border-radius: 0.5rem;
+    box-shadow: 0px 1px 20px -15px;
+}
+header{
+    width: 100%;
+    padding: 1rem;
+}
+.header-container{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.title{
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+button{
+    background-color: transparent;
+    border: none;
+    color: var(--Grayish-blue);
+    cursor: pointer;
+}
+.total-notifications{
+    font-size: 1rem;
+    background-color: var(--Blue);
+    padding: 0.25rem 0.75rem;
+    border-radius: 20%;
+    color:var(--White)
+}
+.notification-card{
+    display: flex;
+    align-items: center;
+    background-color: var(--White);
+    padding: 1rem;
+    margin: 0.25rem;
+    border-radius: 0.5rem;
+}
+.unread{
+    background-color: var(--Light-grayish-blue-1);
+}
+.notification-body{
+    padding: 0 1rem;
+}
+.avatar{
+    height: 50px;
+    width: 50px;
+}
+.username{
+    font-weight: 800;
+    cursor: pointer;
+}
+.event{
+    font-weight: 600;
+    color: var(--Dark-grayish-blue);
+    cursor: pointer;
+}
+.club{
+    color: var(--Blue);
+}
+.footer{
+    color: var(--Dark-grayish-blue);
+}
+.private-msg{
+    padding: 1rem;
+    border: 1px solid var(--Grayish-blue);
+    margin: 0.5rem;
+    border-radius: 0.5rem;
+    color: var(--Dark-grayish-blue);
+}
+.private-msg:hover{
+    background-color: var(--Light-grayish-blue-1);
+    cursor: pointer;
+}
+@media screen and (max-width:786px) {
+    .container{
+        width: 100%;
+        height: 100vh;
+        overflow: auto;
+    }
+}

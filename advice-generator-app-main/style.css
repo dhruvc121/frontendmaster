@@ -1,0 +1,74 @@
+:root{
+    --Light-Cyan: hsl(193, 38%, 86%);
+    --Neon-Green: hsl(150, 100%, 66%);
+    --Grayish-Blue: hsl(217, 19%, 38%);
+    --Dark-Grayish-Blue: hsl(217, 19%, 24%);
+    --Dark-Blue: hsl(218, 23%, 16%);
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    background-color: var(--Dark-Blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+}
+.container{
+    background-color: var(--Dark-Grayish-Blue);
+    position: relative;
+    padding: 3rem;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 35%;
+}
+.title{
+    color: var(--Neon-Green);
+    font-size: 12px;
+    letter-spacing: 4px;
+    margin: 1rem 0;
+}
+.advice{
+    font-size: 1.8rem;
+    font-weight: 800;
+    text-align: center;
+    margin: 1rem 0;
+    color: var(--Light-Cyan);
+}
+.footer{
+    margin: 1rem 0
+}
+.footer>img{
+    content: url('./images/pattern-divider-desktop.svg');
+}
+button{
+    padding: 1rem;
+    background-color: var(--Neon-Green);
+    border: none;
+    border-radius: 50%;
+    position: absolute;
+    bottom:-8%;
+    display: flex;
+    cursor: pointer;
+    
+}
+button:hover{
+    box-shadow: 0px 0px 5px 1px var(--Neon-Green);
+}
+
+@media screen and (max-width:786px) {
+    .container{
+        width: 90%;
+    }
+    .footer>img{
+        content: url('./images/pattern-divider-mobile.svg');
+    }
+}

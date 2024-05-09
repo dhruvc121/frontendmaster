@@ -1,0 +1,132 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 12px;
+}
+.container{
+    height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card{
+    width: 70%;
+    height: 60%;
+    background-color: white;
+    border-radius: 1rem;
+    display: flex;
+    overflow: hidden;
+}
+.left,.right{
+    width: 100%;
+    /* border: 1px solid black; */
+}
+.background{ 
+    width: 100%;
+    height: 100%;
+    background-image: url(./images/bg-pattern-desktop.svg);
+    background-size: 169%;
+    background-repeat: no-repeat;
+    background-position: -410px -215px;
+
+}
+.illustration{
+    background-image: url(./images/illustration-woman-online-desktop.svg);
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: -75px 50px;
+}
+.box{
+    background-image: url(./images/illustration-box-desktop.svg);
+    height: 15%;
+    width: 15%;
+    background-repeat: no-repeat;
+    position: fixed;
+    top: 335px;
+    left: 130px;
+    z-index: 5;
+}
+.right{
+    padding: 0rem 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+.body{
+    width: 100%;
+    /* padding: 0 1rem; */
+    z-index: 6;
+}
+.button{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: transparent;
+    border: none;
+    font-weight: 400;
+    cursor: pointer;
+    margin-top: 1rem;
+    color:hsl(238, 29%, 16%)
+}
+.answer{
+    margin: 0.5rem 0;
+    color:hsl(237, 12%, 33%);
+    font-weight: 400;
+    height:0px;
+    overflow: hidden;
+}
+.active{
+    transition: 0.5s;
+    height: 30px;
+    
+}
+.title{
+    font-weight: 700;
+    margin-bottom: 3rem;
+    font-size: 2rem;
+}
+.active_btn > p{
+    font-weight: 700;
+}
+.active_btn > span{
+    transform: rotate(180deg);
+}
+@media screen and (max-width: 375px) {
+    .card{
+        width: 100%;
+        margin: 1rem;
+        flex-direction: column;
+    }
+    .left{
+        flex:20%
+    }
+    .right{
+        flex: 80%;
+    }
+    .background{
+        background-image: url(./images/bg-pattern-mobile.svg);
+        height: 100%;
+        width: 100%;
+        background-size: contain;
+        background-position: 55% 0px;
+        background-repeat: no-repeat;
+    }
+    .illustration{
+        background-image: url(./images/illustration-woman-online-mobile.svg);
+        width: 50%;
+        height: 50%;
+        background-repeat: no-repeat;
+        position: absolute;
+        top: 70px;
+        left: 100px;
+        background-position: initial;
+    }
+    .box{
+        display: none;
+    }
+}

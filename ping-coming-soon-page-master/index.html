@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Ping coming soon page</title>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+      <span class="logo"><img src="./images/logo.svg" alt="logo"></span>
+      <h1 class="title">We are launching <span class="bold">soon!</span> </h1>
+      <p class="subtitle">Subscribe and get notified</p>
+      <form onsubmit="myFoo(event)">
+        <input type="text" id="input" class="input" placeholder="Your email address.."/>
+        <span class="error-msg" id="error-msg">Please provide a valid email address.</span>
+        <button class="notify-btn" type="submit">Notify Me</button>
+      </form>
+      <img src="./images/illustration-dashboard.png" alt="illustration" class="illustration">
+      <footer>
+        <div class="footer-btns-container">
+          <button class="footer-btn"><ion-icon name="logo-facebook" class="icon" size="small"></ion-icon></button>
+          <button class="footer-btn"><ion-icon name="logo-twitter" class="icon" size="small"></ion-icon></button>
+          <button class="footer-btn"><ion-icon name="logo-instagram" class="icon" size="small"></ion-icon></button>
+        </div>
+        <p class="footer-text">
+          &copy; Copyright Ping. All rights reserved.
+        </p>
+      </footer>
+    </div>
+  
+<script>
+  const input=document.getElementById('input')
+  const error=document.getElementById('error-msg')
+
+  const myFoo=(e)=>{
+    e.preventDefault();
+    if(!input.value.match(/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/)){
+      input.style.border="1px solid var(--Light-Red)"
+      error.style.display='flex'
+    }else{
+      input.style.border="1px solid var(--Pale-Blue)"
+      error.style.display='none'
+      input.value=""
+    }
+  }
+</script>
+</body>
+</html>
